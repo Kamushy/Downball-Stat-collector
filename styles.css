@@ -1,0 +1,82 @@
+.row {
+    display: flex;
+    width: 100%;
+  }
+  
+  .row div {
+    width: 50%;
+    outline: 1px solid black;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+  }
+
+.king {
+    font-size: large;
+    background-color: greenyellow;
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 0%;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    border: 0px;
+} 
+  
+.king:hover  {
+    background-color: rgb(240, 158, 144);
+}
+
+.queen {
+    font-size: large;
+    background-color: greenyellow;
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 0%;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    border: 0px;
+} 
+  
+.queen:hover  {
+    background-color: rgb(240, 158, 144);
+}
+
+.jack {
+    font-size: large;
+    background-color: greenyellow;
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 0%;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    border: 0px;
+} 
+  
+.jack:hover  {
+    background-color: rgb(240, 158, 144);
+}
+
+.dunce {
+    font-size: large;
+    background-color: greenyellow;
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 0%;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    border: 0px;
+} 
+  
+.dunce:hover  {
+    background-color: rgb(240, 158, 144);
+}
+
+
+
+
+  
