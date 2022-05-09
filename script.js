@@ -25,7 +25,7 @@ function jackout() {
     btnjack.textContent = tojack;  
     btndunce.textContent = ""; 
 
-    var e = document.getElementById("cars");
+    var e = document.getElementById("chooseplayers");
     var strUser = e.options[e.selectedIndex].text;
     btndunce.textContent = strUser;
 
@@ -39,7 +39,7 @@ function dunceout() {
     btnjack.textContent = tojack;  
     btndunce.textContent = ""; 
 
-    var e = document.getElementById("cars");
+    var e = document.getElementById("chooseplayers");
     var strUser = e.options[e.selectedIndex].text;
     btndunce.textContent = strUser;
 
@@ -63,7 +63,7 @@ function kingout() {
         btndunce.textContent = todunce ;
     } else {
         btndunce.textContent = ""; 
-        var e = document.getElementById("cars");
+        var e = document.getElementById("chooseplayers");
         var strUser = e.options[e.selectedIndex].text;
         btndunce.textContent = strUser;
     }
