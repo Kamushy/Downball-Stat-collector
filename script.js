@@ -1,4 +1,3 @@
-
 function queenout() {
     var btnqueen = document.getElementById('queen');
     var btnjack = document.getElementById('jack');
@@ -38,7 +37,6 @@ function dunceout() {
     var e = document.getElementById("chooseplayers");
     var strUser = e.options[e.selectedIndex].text;
     btndunce.textContent = strUser;
-
 }
 
 function kingout() {
@@ -66,9 +64,7 @@ function kingout() {
     }
 }
 
-var acesperperson = []
-var kills = []
-var deaths = []
+
 function doeverything(){
   var btnking = document.getElementById('king');
   var btnqueen = document.getElementById('queen');
@@ -126,28 +122,62 @@ function doeverything(){
   if (choosenevent === "Gets out"){
     if (firstplayerusable === kingusable || firstplayerusable === queenusable || firstplayerusable === jackusable || firstplayerusable === dunceusable){
       if (secondplayerusable === kingusable){
-        var stats = document.getElementById('stats').innerHTML;
-        stats.textContent = "1" ;
-        kills[firstplayerusable] += 1
-        deaths[secondplayerusable] += 1
-        kingout()
+        kingout.call();
       }
       else if (secondplayerusable === queenusable){
-        kills[firstplayerusable] += 1
-        deaths[secondplayerusable] += 1
-        queenout()
+        queenout.call();
       }
       else if (secondplayerusable === jackusable){
-        kills[firstplayerusable] += 1
-        deaths[secondplayerusable] += 1
-        jackout()
+        jackout.call();
       }
       else if (secondplayerusable === dunceusable){
-        kills[firstplayerusable] += 1
-        deaths[secondplayerusable] += 1
-        dunceout()
+        dunceout.call();
       }
     }
 
   }
+}
+
+function placeking() {
+  //get the king
+  var btnking = document.getElementById('king');
+  // get the seleted player
+  var e = document.getElementById("chooseplayers");
+  var strUser = e.options[e.selectedIndex].text;
+  //set the selected player in the position
+  btnking.textContent = strUser
+
+}
+
+function placequeen() {
+  //get the queen
+  var btnqueen = document.getElementById('queen');
+  // get the seleted player
+  var e = document.getElementById("chooseplayers");
+  var strUser = e.options[e.selectedIndex].text;
+  //set the selected player in the position
+  btnqueen.textContent = strUser
+
+}
+
+function placejack() {
+  //get the jack
+  var btnjack = document.getElementById('jack');
+  // get the seleted player
+  var e = document.getElementById("chooseplayers");
+  var strUser = e.options[e.selectedIndex].text;
+  //set the selected player in the position
+  btnjack.textContent = strUser
+
+}
+
+function placedunce() {
+  //get the dunce
+  var btndunce = document.getElementById('dunce');
+  // get the seleted player
+  var e = document.getElementById("chooseplayers");
+  var strUser = e.options[e.selectedIndex].text;
+  //set the selected player in the position
+  btndunce.textContent = strUser
+
 }

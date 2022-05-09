@@ -10,30 +10,30 @@
     <div class="row noMargin">
         <div class="brah">
           <p>Queen</p>
-          <button onclick="queenout()" class="queen" id="queen"></button>
+          <button class="queen" id="queen" onclick="queenout()" oncontextmenu="placequeen();return false;"></button>
           </p>
         </div>
         <div class="brah">
           <p>Jack</p>
-          <button class="jack" id="jack" onclick="jackout()"></button>
+          <button class="jack" id="jack" onclick="jackout()" oncontextmenu="placejack();return false;" ></button>
         </p>
         </div>
       </div>
       <div class="row noMargin">
         <div class="brah">
           <p>King</p>
-          <button class="king" id="king" onclick="kingout()"></button>
+          <button class="king" id="king" onclick="kingout()" oncontextmenu="placeking();return false;"></button>
           </button>
         </div>
         <div class="brah">
             <p>Dunce</p>
-            <button class="dunce" id="dunce" onclick="dunceout()"></button>
+            <button class="dunce" id="dunce" onclick="dunceout()" oncontextmenu="placedunce();return false;"></button>
         </div>
         <form action="" method="post" id="person1">
           <label for="firstplayer" class="secondthing"></label>
           <select name="firstPlayers" id="firstplayer" class="secondthing">
             <option value="Dylan Johnson">Dylan Johnson</option>
-            <option value="Dylan Nubean" >Dylan Nubean</option>
+            <option value="Dylan Nutbean" >Dylan Nutbean</option>
             <option value="Kalan Scrivener">Kalan Scrivener</option>
             <option value="Adem Rifat">Adem Rifat</option>
             <option value="James Adams">James Adams</option>
@@ -55,7 +55,7 @@
         <form action="" method="post" id="person2">
           <select name="secondPlayers" id="secondplayer" class="secondthing">
             <option value="Dylan Johnson">Dylan Johnson</option>
-            <option value="Dylan Nubean" >Dylan Nubean</option>
+            <option value="Dylan Nutbean" >Dylan Nutbean</option>
             <option value="Kalan Scrivener">Kalan Scrivener</option>
             <option value="Adem Rifat">Adem Rifat</option>
             <option value="James Adams">James Adams</option>
@@ -64,7 +64,7 @@
             <option value="Luca Bird">Luca Bird</option>
             
           </select>
-          <button onclick="doeverything()" class="submitbutton">Submit</button>
+          <button onclick="return doeverything()" class="submitbutton">Submit</button>
         </form>
         
 
@@ -88,7 +88,7 @@
       <label for="chooseplayers" class="playerchooselabel">Next player in: </label>
       <select name="Players" id="chooseplayers" class="playerchoose">
         <option value="Dylan Johnson">Dylan Johnson</option>
-        <option value="Dylan Nubean" >Dylan Nubean</option>
+        <option value="Dylan Nutbean" >Dylan Nutbean</option>
         <option value="Kalan Scrivener">Kalan Scrivener</option>
         <option value="Adem Rifat">Adem Rifat</option>
         <option value="James Adams">James Adams</option>
@@ -100,7 +100,8 @@
     </form>
     
  
-
+    
+  </div>
 </body>
 
 </html>
