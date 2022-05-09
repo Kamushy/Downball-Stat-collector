@@ -1,3 +1,4 @@
+
 function queenout() {
     var btnqueen = document.getElementById('queen');
     var btnjack = document.getElementById('jack');
@@ -10,7 +11,7 @@ function queenout() {
     btnjack.textContent = tojack;  
     btndunce.textContent = ""; 
 
-    var e = document.getElementById("cars");
+    var e = document.getElementById("chooseplayers");
     var strUser = e.options[e.selectedIndex].text;
     btndunce.textContent = strUser;
    
@@ -32,12 +33,7 @@ function jackout() {
 }
 
 function dunceout() {
-    var btnjack = document.getElementById('jack');
     var btndunce = document.getElementById('dunce');
-
-    var tojack = btndunce.textContent
-    btnjack.textContent = tojack;  
-    btndunce.textContent = ""; 
 
     var e = document.getElementById("chooseplayers");
     var strUser = e.options[e.selectedIndex].text;
@@ -59,32 +55,99 @@ function kingout() {
     btnking.textContent = toking ;
     btnqueen.textContent = toqueen ;
     btnjack.textContent = tojack ;
+    
     if (btndunce.length === 0) {
-        btndunce.textContent = todunce ;
-    } else {
-        btndunce.textContent = ""; 
-        var e = document.getElementById("chooseplayers");
-        var strUser = e.options[e.selectedIndex].text;
-        btndunce.textContent = strUser;
+      var e = document.getElementById("chooseplayers");
+      var strUser = e.options[e.selectedIndex].text;
+      btndunce.textContent = strUser;
+       
+    } else { 
+      btndunce.textContent = todunce ;
     }
 }
 
-var minutesLabel = document.getElementById("minutes");
-var secondsLabel = document.getElementById("seconds");
-var totalSeconds = 0;
-setInterval(setTime, 1000);
+var acesperperson = []
+var kills = []
+var deaths = []
+function doeverything(){
+  var btnking = document.getElementById('king');
+  var btnqueen = document.getElementById('queen');
+  var btnjack = document.getElementById('jack');
+  var btndunce = document.getElementById('dunce');
 
-function setTime() {
-  ++totalSeconds;
-  secondsLabel.innerHTML = pad(totalSeconds % 60);
-  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
-}
+  var kingusable = btnking.textContent
+  var queenusable = btnqueen.textContent
+  var jackusable = btnjack.textContent
+  var dunceusable = btndunce.textContent
 
-function pad(val) {
-  var valString = val + "";
-  if (valString.length < 2) {
-    return "0" + valString;
-  } else {
-    return valString;
+  var firstplayer = document.getElementById("firstplayer");
+  var firstplayerusable = firstplayer.options[firstplayer.selectedIndex].text;
+
+  var secondplayer = document.getElementById("secondplayer");
+  var secondplayerusable = secondplayer.options[secondplayer.selectedIndex].text;
+  
+  var event = document.getElementById("events");
+  var choosenevent = event.options[event.selectedIndex].text;
+
+  // if the event is aces
+  if (choosenevent === "Aces"){
+    // if king selected is king
+    if (kingusable === firstplayerusable){
+      // if dunce selected is dunce
+      if (dunceusable === secondplayerusable) {
+        //adds ace count to king
+        acesperperson[kingusable] = 1
+        //this chunk puts first player in line in
+        var e = document.getElementById("chooseplayers");
+        var strUser = e.options[e.selectedIndex].text;
+        btndunce.textContent = strUser;
+      }
+      // if dunce doens't go out then check if jack does
+      else if(jackusable === secondplayerusable) {
+        //adds ace count to king
+        acesperperson[kingusable] += 1
+        //this chunk puts first player in line in
+        var e = document.getElementById("chooseplayers");
+        var strUser = e.options[e.selectedIndex].text;
+        btndunce.textContent = strUser;
+      }
+      // if both dont go out check if queen does
+      else if(queenusable === secondplayerusable) {
+        //adds ace count to king
+        acesperperson[kingusable] = 1
+        //this chunk puts first player in line in
+        var e = document.getElementById("chooseplayers");
+        var strUser = e.options[e.selectedIndex].text;
+        btndunce.textContent = strUser;
+      }
+    }
+  }
+
+  if (choosenevent === "Gets out"){
+    if (firstplayerusable === kingusable || firstplayerusable === queenusable || firstplayerusable === jackusable || firstplayerusable === dunceusable){
+      if (secondplayerusable === kingusable){
+        var stats = document.getElementById('stats').innerHTML;
+        stats.textContent = "1" ;
+        kills[firstplayerusable] += 1
+        deaths[secondplayerusable] += 1
+        kingout()
+      }
+      else if (secondplayerusable === queenusable){
+        kills[firstplayerusable] += 1
+        deaths[secondplayerusable] += 1
+        queenout()
+      }
+      else if (secondplayerusable === jackusable){
+        kills[firstplayerusable] += 1
+        deaths[secondplayerusable] += 1
+        jackout()
+      }
+      else if (secondplayerusable === dunceusable){
+        kills[firstplayerusable] += 1
+        deaths[secondplayerusable] += 1
+        dunceout()
+      }
+    }
+
   }
 }
