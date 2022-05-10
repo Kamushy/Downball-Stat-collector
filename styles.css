@@ -92,21 +92,20 @@
 }
 
 .secondthing {
-    bottom: 100%;
     left: auto;
     right: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: x-large;
-    position: relative;
+    position: sticky;
     
 }
 .submitbutton {
-    bottom: 100%;
     left: auto;
+    margin-top: auto;
     right:0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: x-large;
-    position: relative;
+    position:sticky;
 }
 
 .grid-container {
