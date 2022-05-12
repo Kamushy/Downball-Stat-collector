@@ -123,7 +123,7 @@ function doeverything(){
 
     if (firstplayerusable === kingusable || firstplayerusable === queenusable || firstplayerusable === jackusable || firstplayerusable === dunceusable){
       if (secondplayerusable === kingusable){
-        
+
         kingout.call();
 
         //gets the og value for first user
@@ -134,6 +134,15 @@ function doeverything(){
         firstuserbefore += 1;
         //puts it back
         document.getElementById(firstplayerusable + "kills").innerHTML = firstuserbefore;
+
+        // gets og deaths value
+        var seconduserrbefore = document.getElementById(secondplayerusable + "deaths").innerHTML;
+        //turns it to int
+        seconduserrbefore = parseInt(seconduserrbefore);
+        //adds 1 
+        seconduserrbefore += 1;
+        //puts it back
+        document.getElementById(secondplayerusable + "deaths").innerHTML = seconduserrbefore;
 
 
         // PLAYER 1 KD
@@ -171,7 +180,7 @@ function doeverything(){
           kd = secondkills / seconddeaths
         }
         //puts it back
-        document.getElementById(secondplayerusable + "KD").innerHTML = kd.toFixed(2);
+        document.getElementById(secondplayerusable + "KD").innerHTML = kd.toFixed(2);        
       }
       else if (secondplayerusable === queenusable){
         queenout.call();
