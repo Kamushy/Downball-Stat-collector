@@ -120,18 +120,83 @@ function doeverything(){
   }
 
   if (choosenevent === "Gets out"){
+
     if (firstplayerusable === kingusable || firstplayerusable === queenusable || firstplayerusable === jackusable || firstplayerusable === dunceusable){
       if (secondplayerusable === kingusable){
+        
         kingout.call();
+
+        //gets the og value for first user
+        var firstuserbefore = document.getElementById(firstplayerusable + "kills").innerHTML;
+        //turns it to int
+        firstuserbefore = parseInt(firstuserbefore);
+        //adds 1 
+        firstuserbefore += 1;
+        //puts it back
+        document.getElementById(firstplayerusable + "kills").innerHTML = firstuserbefore;
       }
       else if (secondplayerusable === queenusable){
         queenout.call();
+
+        //gets the og value for first user
+        var firstuserbefore = document.getElementById(firstplayerusable + "kills").innerHTML;
+        //turns it to int
+        firstuserbefore = parseInt(firstuserbefore);
+        //adds 1 
+        firstuserbefore += 1;
+        //puts it back
+        document.getElementById(firstplayerusable + "kills").innerHTML = firstuserbefore;
+
+        // gets og deaths value
+        var seconduserrbefore = document.getElementById(secondplayerusable + "deaths").innerHTML;
+        //turns it to int
+        seconduserrbefore = parseInt(seconduserrbefore);
+        //adds 1 
+        seconduserrbefore += 1;
+        //puts it back
+        document.getElementById(secondplayerusable + "deaths").innerHTML = seconduserrbefore;
       }
       else if (secondplayerusable === jackusable){
         jackout.call();
+
+        //gets the og value for first user
+        var firstuserbefore = document.getElementById(firstplayerusable + "kills").innerHTML;
+        //turns it to int
+        firstuserbefore = parseInt(firstuserbefore);
+        //adds 1 
+        firstuserbefore += 1;
+        //puts it back
+        document.getElementById(firstplayerusable + "kills").innerHTML = firstuserbefore;
+
+        // gets og deaths value
+        var seconduserrbefore = document.getElementById(secondplayerusable + "deaths").innerHTML;
+        //turns it to int
+        seconduserrbefore = parseInt(seconduserrbefore);
+        //adds 1 
+        seconduserrbefore += 1;
+        //puts it back
+        document.getElementById(secondplayerusable + "deaths").innerHTML = seconduserrbefore;
       }
       else if (secondplayerusable === dunceusable){
         dunceout.call();
+
+        //gets the og value for first user
+        var firstuserbefore = document.getElementById(firstplayerusable + "kills").innerHTML;
+        //turns it to int
+        firstuserbefore = parseInt(firstuserbefore);
+        //adds 1 
+        firstuserbefore += 1;
+        //puts it back
+        document.getElementById(firstplayerusable + "kills").innerHTML = firstuserbefore;
+
+        // gets og deaths value
+        var seconduserrbefore = document.getElementById(secondplayerusable + "deaths").innerHTML;
+        //turns it to int
+        seconduserrbefore = parseInt(seconduserrbefore);
+        //adds 1 
+        seconduserrbefore += 1;
+        //puts it back
+        document.getElementById(secondplayerusable + "deaths").innerHTML = seconduserrbefore;
       }
     }
 
@@ -179,5 +244,6 @@ function placedunce() {
   var strUser = e.options[e.selectedIndex].text;
   //set the selected player in the position
   btndunce.textContent = strUser
-
 }
+
+

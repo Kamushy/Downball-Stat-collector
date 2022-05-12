@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+        </head>
+
+<h1>Downball Stats for DJ</h1>
+<body>
+    <div class="row noMargin">
+        <div class="brah">
+          <p>Queen</p>
+          <button class="queen" id="queen" onclick="queenout()" oncontextmenu="placequeen();return false;"></button>
+          </p>
+        </div>
+        <div class="brah">
+          <p>Jack</p>
+          <button class="jack" id="jack" onclick="jackout()" oncontextmenu="placejack();return false;" ></button>
+        </p>
+        </div>
+        <div> 
+          <form action="" method="post" id="person1">
+            <label for="firstplayer" class="secondthing"></label>
+            <select name="firstPlayers" id="firstplayer" class="secondthing">
+              <option value="Dylan Johnson">Dylan Johnson</option>
+              <option value="Dylan Nutbean" >Dylan Nutbean</option>
+              <option value="Kalan Scrivener">Kalan Scrivener</option>
+              <option value="Adem Rifat">Adem Rifat</option>
+              <option value="James Adams">James Adams</option>
+              <option value="James Philips">James Philips</option>
+              <option value="Luca Macali">Luca Macali</option>
+              <option value="Luca Bird">Luca Bird</option>
+              <option value="Lachlan Muscruft">Lachlan Muscruft</option>
+              <option value="Samuel Addis">Samuel Addis</option>
+              <option value="Ryan Shen">Ryan Shen</option>
+              <option value="Ashley Mcdonald">Ashley Mcdonald</option>
+              <option value="Ebony Craven">Ebony Craven</option>
+            </select>
+          </form>
+          </div>
+          <div>
+          <form action="" method="post" id="person1">
+            <select name="events" id="events" class="secondthing">
+              <option value="Gets out">Gets out</option>
+              <option value="Aces">Ace serves</option>
+            </select>
+          </div>
+          </form>
+         <div>
+          <form action="" method="post" id="person2">
+            <select name="secondPlayers" id="secondplayer" class="secondthing">
+              <option value="Dylan Johnson">Dylan Johnson</option>
+              <option value="Dylan Nutbean" >Dylan Nutbean</option>
+              <option value="Kalan Scrivener">Kalan Scrivener</option>
+              <option value="Adem Rifat">Adem Rifat</option>
+              <option value="James Adams">James Adams</option>
+              <option value="James Philips">James Philips</option>
+              <option value="Luca Macali">Luca Macali</option>
+              <option value="Luca Bird">Luca Bird</option>
+              <option value="Lachlan Muscruft">Lachlan Muscruft</option>
+              <option value="Samuel Addis">Samuel Addis</option>
+              <option value="Ryan Shen">Ryan Shen</option>
+              <option value="Ashley Mcdonald">Ashley Mcdonald</option>
+              <option value="Ebony Craven">Ebony Craven</option>
+            </select>
+          </form>
+          </div>
+          <div>
+          <button onclick="return doeverything()" class="secondthing">Submit</button>
+        </div>
+      </div>
+      <div class="row noMargin">
+        <div class="brah">
+          <p>King</p>
+          <button class="king" id="king" onclick="kingout()" oncontextmenu="placeking();return false;"></button>
+          </button>
+        </div>
+        <div class="brah">
+            <p>Dunce</p>
+            <button class="dunce" id="dunce" onclick="dunceout()" oncontextmenu="placedunce();return false;"></button>
+        </div>
+        
+
+  <div class="grid-container">
+    <div class="grid-item">Players</div>
+    <div class="grid-item">K/D</div>
+    <div class="grid-item">Kills</div>  
+    <div class="grid-item">Deaths</div>
+    <div class="grid-item">Aces</div>
+    <div class="grid-item">Mistakes</div>  
+    <div class="grid-item">Complaints</div>
+    
+    <div class="grid-item" value="Dylan Johnson">Dylan Johnson</div>
+    <div class="grid-item" id="Dylan JohnsonKD">0</div>
+    <div class="grid-item" id="Dylan Johnsonkills">0</div>
+    <div class="grid-item" id="Dylan Johnsondeaths">0</div>
+    <div class="grid-item" id="Dylan JohnsonAces">0</div>
+    <div class="grid-item" id="Dylan Johnsonmistakes">0</div>
+    <div class="grid-item" id="Dylan JohnsonComplaints">0</div>
+
+    <div class="grid-item" value="Dylan Nutbean" >Dylan Nutbean</div>
+    <div class="grid-item" id="Dylan NutbeanKD">0</div>
+    <div class="grid-item" id="Dylan Nutbeankills">0</div>
+    <div class="grid-item" id="Dylan Nutbeandeaths">0</div>
+    <div class="grid-item" id="Dylan NutbeanAces">0</div>
+    <div class="grid-item" id="Dylan Nutbeanmistakes">0</div>
+    <div class="grid-item" id="Dylan NutbeanComplaints">0</div>
+
+    <div class="grid-item" value="Kalan Scrivener">Kalan Scrivener</div>
+    <div class="grid-item" id="Kalan ScrivenerKD">0</div>
+    <div class="grid-item" id="Kalan Scrivenerkills">0</div>
+    <div class="grid-item" id="Kalan Scrivenerdeaths">0</div>
+    <div class="grid-item" id="Kalan ScrivenerAces">0</div>
+    <div class="grid-item" id="Kalan Scrivenermistakes">0</div>
+    <div class="grid-item" id="Kalan ScrivenerComplaints">0</div>
+
+    <div class="grid-item" value="Adem Rifat">Adem Rifat</div>
+    <div class="grid-item" id="Adem RifatKD">0</div>
+    <div class="grid-item" id="Adem Rifatkills">0</div>
+    <div class="grid-item" id="Adem Rifatdeaths">0</div>
+    <div class="grid-item" id="Adem RifatAces">0</div>
+    <div class="grid-item" id="Adem Rifatmistakes">0</div>
+    <div class="grid-item" id="Adem RifatComplaints">0</div>
+
+    <div class="grid-item" value="James Adams">James Adams</div>
+    <div class="grid-item" id="James AdamsKD">0</div>
+    <div class="grid-item" id="James Adamskills">0</div>
+    <div class="grid-item" id="James Adamsdeaths">0</div>
+    <div class="grid-item" id="James AdamsAces">0</div>
+    <div class="grid-item" id="James Adamsmistakes">0</div>
+    <div class="grid-item" id="James AdamsComplaints">0</div>
+
+    <div class="grid-item" value="James Philips">James Philips</div>
+    <div class="grid-item" id="James PhilipsKD">0</div>
+    <div class="grid-item" id="James Philipskills">0</div>
+    <div class="grid-item" id="James Philipsdeaths">0</div>
+    <div class="grid-item" id="James PhilipsAces">0</div>
+    <div class="grid-item" id="James Philipsmistakes">0</div>
+    <div class="grid-item" id="James PhilipsComplaints">0</div>
+
+    <div class="grid-item" value="Luca Macali">Luca Macali</div>
+    <div class="grid-item" id="Luca MacaliKD">0</div>
+    <div class="grid-item" id="Luca Macalikills">0</div>
+    <div class="grid-item" id="Luca Macalideaths">0</div>
+    <div class="grid-item" id="Luca MacaliAces">0</div>
+    <div class="grid-item" id="Luca Macalimistakes">0</div>
+    <div class="grid-item" id="Luca MacaliComplaints">0</div>
+
+    <div class="grid-item" value="Luca Bird">Luca Bird</div>
+    <div class="grid-item" id="Luca BirdD">0</div>
+    <div class="grid-item" id="Luca Birdkills">0</div>
+    <div class="grid-item" id="Luca Birddeaths">0</div>
+    <div class="grid-item" id="Luca BirdAces">0</div>
+    <div class="grid-item" id="Luca Birdmistakes">0</div>
+    <div class="grid-item" id="Luca BirdComplaints">0</div>
+
+    <div class="grid-item" value="Lachlan Muscruft">Lachlan Muscruft</div>
+    <div class="grid-item" id="Lachlan MuscruftKD">0</div>
+    <div class="grid-item" id="Lachlan Muscruftkills">0</div>
+    <div class="grid-item" id="Lachlan Muscruftdeaths">0</div>
+    <div class="grid-item" id="Lachlan MuscruftAces">0</div>
+    <div class="grid-item" id="Lachlan Muscruftmistakes">0</div>
+    <div class="grid-item" id="Lachlan MuscruftComplaints">0</div>
+
+    <div class="grid-item" value="Samuel Addis">Samuel Addis</div>
+    <div class="grid-item" id="Samuel AddisKD">0</div>
+    <div class="grid-item" id="Samuel Addiskills">0</div>
+    <div class="grid-item" id="Samuel Addisdeaths">0</div>
+    <div class="grid-item" id="Samuel AddisAces">0</div>
+    <div class="grid-item" id="Samuel Addismistakes">0</div>
+    <div class="grid-item" id="Samuel AddisComplaints">0</div>
+
+    <div class="grid-item" value="Ryan Shen">Ryan Shen</div>
+    <div class="grid-item" id="Ryan ShenKD">0</div>
+    <div class="grid-item" id="Ryan Shenkills">0</div>
+    <div class="grid-item" id="Ryan Shendeaths">0</div>
+    <div class="grid-item" id="Ryan ShenAces">0</div>
+    <div class="grid-item" id="Ryan Shenmistakes">0</div>
+    <div class="grid-item" id="Ryan ShenComplaints">0</div>
+
+    <div class="grid-item" value="Ashley Mcdonald">Ashley Mcdonal</div>
+    <div class="grid-item" id="Ashley McdonaldKD">0</div>
+    <div class="grid-item" id="Ashley Mcdonaldkills">0</div>
+    <div class="grid-item" id="Ashley Mcdonalddeaths">0</div>
+    <div class="grid-item" id="Ashley McdonaldAces">0</div>
+    <div class="grid-item" id="Ashley Mcdonaldmistakes">0</div>
+    <div class="grid-item" id="Ashley McdonaldComplaints">0</div>
+
+    <div class="grid-item" value="Ebony Craven">Ebony Craven</div>
+    <div class="grid-item" id="Ebony CravenKD">0</div>
+    <div class="grid-item" id="Ebony Cravenkills">0</div>
+    <div class="grid-item" id="Ebony Cravendeaths">0</div>
+    <div class="grid-item" id="Ebony CravenAces">0</div>
+    <div class="grid-item" id="Ebony Cravenmistakes">0</div>
+    <div class="grid-item" id="Ebony CravenComplaints">0</div>
+    
+  </div>
+        
+      </div>
+     </div>
+     
+    <form action="" method="post" id="this">
+      <label for="chooseplayers" class="playerchooselabel">Next player in: </label>
+      <select name="Players" id="chooseplayers" class="playerchoose">
+        <option value="Dylan Johnson">Dylan Johnson</option>
+        <option value="Dylan Nutbean" >Dylan Nutbean</option>
+        <option value="Kalan Scrivener">Kalan Scrivener</option>
+        <option value="Adem Rifat">Adem Rifat</option>
+        <option value="James Adams">James Adams</option>
+        <option value="James Philips">James Philips</option>
+        <option value="Luca Macali">Luca Macali</option>
+        <option value="Luca Bird">Luca Bird</option>
+        <option value="Lachlan Muscruft">Lachlan Muscruft</option>
+        <option value="Samuel Addis">Samuel Addis</option>
+        <option value="Ryan Shen">Ryan Shen</option>
+        <option value="Ashley Mcdonald">Ashley Mcdonald</option>
+        <option value="Ebony Craven">Ebony Craven</option>
+      </select>
+      <br><br>
+    </form>
+    
+ 
+    
+  </div>
+</body>
+
+</html>
