@@ -134,6 +134,44 @@ function doeverything(){
         firstuserbefore += 1;
         //puts it back
         document.getElementById(firstplayerusable + "kills").innerHTML = firstuserbefore;
+
+
+        // PLAYER 1 KD
+
+        //gets og kills value
+        var firstkills = document.getElementById(firstplayerusable + "kills").innerHTML;
+        // gets og deaths value
+        var firstdeaths = document.getElementById(firstplayerusable + "deaths").innerHTML;
+        //turns it to int
+        firstkills = parseInt(firstkills);
+        firstdeaths = parseInt(firstdeaths);
+        //if death is 0 then the kd should still be right
+        if (firstdeaths <= 0){
+          kd = firstkills/ 1
+        } else {
+          kd = firstkills / firstdeaths
+        }
+        //puts it back
+        document.getElementById(firstplayerusable + "KD").innerHTML = kd.toFixed(2);
+
+
+        // PLAYER 2 KD
+
+        //gets og kills value
+        var secondkills = document.getElementById(secondplayerusable + "kills").innerHTML;
+        // gets og deaths value
+        var seconddeaths = document.getElementById(secondplayerusable + "deaths").innerHTML;
+        //turns it to int
+        secondkills = parseInt(secondkills);
+        seconddeaths = parseInt(seconddeaths);
+        //if death is 0 then the kd should still be right
+        if (seconddeaths <= 0){
+          kd = secondkills/ 1
+        } else {
+          kd = secondkills / seconddeaths
+        }
+        //puts it back
+        document.getElementById(secondplayerusable + "KD").innerHTML = kd.toFixed(2);
       }
       else if (secondplayerusable === queenusable){
         queenout.call();
@@ -155,6 +193,44 @@ function doeverything(){
         seconduserrbefore += 1;
         //puts it back
         document.getElementById(secondplayerusable + "deaths").innerHTML = seconduserrbefore;
+
+
+        // PLAYER 1 KD
+
+        //gets og kills value
+        var firstkills = document.getElementById(firstplayerusable + "kills").innerHTML;
+        // gets og deaths value
+        var firstdeaths = document.getElementById(firstplayerusable + "deaths").innerHTML;
+        //turns it to int
+        firstkills = parseInt(firstkills);
+        firstdeaths = parseInt(firstdeaths);
+        //if death is 0 then the kd should still be right
+        if (firstdeaths <= 0){
+          kd = firstkills/ 1
+        } else {
+          kd = firstkills / firstdeaths
+        }
+        //puts it back
+        document.getElementById(firstplayerusable + "KD").innerHTML = kd.toFixed(2);
+
+
+        // PLAYER 2 KD
+
+        //gets og kills value
+        var secondkills = document.getElementById(secondplayerusable + "kills").innerHTML;
+        // gets og deaths value
+        var seconddeaths = document.getElementById(secondplayerusable + "deaths").innerHTML;
+        //turns it to int
+        secondkills = parseInt(secondkills);
+        seconddeaths = parseInt(seconddeaths);
+        //if death is 0 then the kd should still be right
+        if (seconddeaths <= 0){
+          kd = secondkills/ 1
+        } else {
+          kd = secondkills / seconddeaths
+        }
+        //puts it back
+        document.getElementById(secondplayerusable + "KD").innerHTML = kd.toFixed(2);
       }
       else if (secondplayerusable === jackusable){
         jackout.call();
@@ -176,6 +252,44 @@ function doeverything(){
         seconduserrbefore += 1;
         //puts it back
         document.getElementById(secondplayerusable + "deaths").innerHTML = seconduserrbefore;
+
+
+        // PLAYER 1 KD
+
+        //gets og kills value
+        var firstkills = document.getElementById(firstplayerusable + "kills").innerHTML;
+        // gets og deaths value
+        var firstdeaths = document.getElementById(firstplayerusable + "deaths").innerHTML;
+        //turns it to int
+        firstkills = parseInt(firstkills);
+        firstdeaths = parseInt(firstdeaths);
+        //if death is 0 then the kd should still be right
+        if (firstdeaths <= 0){
+          kd = firstkills/ 1
+        } else {
+          kd = firstkills / firstdeaths
+        }
+        //puts it back
+        document.getElementById(firstplayerusable + "KD").innerHTML = kd.toFixed(2);
+
+
+        // PLAYER 2 KD
+
+        //gets og kills value
+        var secondkills = document.getElementById(secondplayerusable + "kills").innerHTML;
+        // gets og deaths value
+        var seconddeaths = document.getElementById(secondplayerusable + "deaths").innerHTML;
+        //turns it to int
+        secondkills = parseInt(secondkills);
+        seconddeaths = parseInt(seconddeaths);
+        //if death is 0 then the kd should still be right
+        if (seconddeaths <= 0){
+          kd = secondkills/ 1
+        } else {
+          kd = secondkills / seconddeaths
+        }
+        //puts it back
+        document.getElementById(secondplayerusable + "KD").innerHTML = kd.toFixed(2);
       }
       else if (secondplayerusable === dunceusable){
         dunceout.call();
@@ -197,6 +311,44 @@ function doeverything(){
         seconduserrbefore += 1;
         //puts it back
         document.getElementById(secondplayerusable + "deaths").innerHTML = seconduserrbefore;
+
+
+        // PLAYER 1 KD
+
+        //gets og kills value
+        var firstkills = document.getElementById(firstplayerusable + "kills").innerHTML;
+        // gets og deaths value
+        var firstdeaths = document.getElementById(firstplayerusable + "deaths").innerHTML;
+        //turns it to int
+        firstkills = parseInt(firstkills);
+        firstdeaths = parseInt(firstdeaths);
+        //if death is 0 then the kd should still be right
+        if (firstdeaths <= 0){
+          kd = firstkills/ 1
+        } else {
+          kd = firstkills / firstdeaths
+        }
+        //puts it back
+        document.getElementById(firstplayerusable + "KD").innerHTML = kd.toFixed(2);
+
+
+        // PLAYER 2 KD
+
+        //gets og kills value
+        var secondkills = document.getElementById(secondplayerusable + "kills").innerHTML;
+        // gets og deaths value
+        var seconddeaths = document.getElementById(secondplayerusable + "deaths").innerHTML;
+        //turns it to int
+        secondkills = parseInt(secondkills);
+        seconddeaths = parseInt(seconddeaths);
+        //if death is 0 then the kd should still be right
+        if (seconddeaths <= 0){
+          kd = secondkills/ 1
+        } else {
+          kd = secondkills / seconddeaths
+        }
+        //puts it back
+        document.getElementById(secondplayerusable + "KD").innerHTML = kd.toFixed(2);
       }
     }
 
@@ -247,3 +399,6 @@ function placedunce() {
 }
 
 
+
+
+  
