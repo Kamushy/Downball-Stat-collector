@@ -257,7 +257,7 @@ function doeverything() {
         document.getElementById(dunceusable + "Deaths per round").innerHTML = duncedeathratio.toFixed(2);
         document.getElementById(jackusable + "Deaths per round").innerHTML = jackdeathratio.toFixed(2);
         document.getElementById(queenusable + "Deaths per round").innerHTML = queedeathratio.toFixed(2);
-  document.getElementById(kingusable + "Deaths per round").innerHTML = kingdeathratio.toFixed(2);
+        document.getElementById(kingusable + "Deaths per round").innerHTML = kingdeathratio.toFixed(2);
       }
       else if (secondplayerusable === queenusable){
         queenout.call();
@@ -825,4 +825,24 @@ function placedunce() {
 
   
 
+function domistake(){
+  var firstplayer = document.getElementById("firstplayer");
+  var firstplayerusable = firstplayer.options[firstplayer.selectedIndex].text;
+  
+  //set the selected player in the position
 
+  var mistakes = document.getElementById(firstplayerusable + "mistakes").innerHTML;
+ 
+  //turns it into int
+  mistakes = parseInt(mistakes);
+  //ads one per round
+  mistakes = mistakes + 1;
+ 
+  document.getElementById(firstplayerusable + "mistakes").innerHTML = mistakes;
+
+}
+
+function docomplaints(){
+
+
+}
