@@ -823,26 +823,30 @@ function placedunce() {
   btndunce.textContent = strUser
 }
 
-  
-
 function domistake(){
+  //get the first player selected 
   var firstplayer = document.getElementById("firstplayer");
   var firstplayerusable = firstplayer.options[firstplayer.selectedIndex].text;
-  
-  //set the selected player in the position
-
+  //gets prevous mistakes
   var mistakes = document.getElementById(firstplayerusable + "mistakes").innerHTML;
- 
   //turns it into int
   mistakes = parseInt(mistakes);
-  //ads one per round
+  //adds one 
   mistakes = mistakes + 1;
- 
+  //puts it back
   document.getElementById(firstplayerusable + "mistakes").innerHTML = mistakes;
-
 }
 
 function docomplaints(){
-
-
+  //get the first player selected 
+  var firstplayer = document.getElementById("firstplayer");
+  var firstplayerusable = firstplayer.options[firstplayer.selectedIndex].text;
+  //gets prevous mistakes
+  var complaints = document.getElementById(firstplayerusable + "Complaints").innerHTML;
+  //turns it into int
+  complaints = parseInt(complaints);
+  //adds one 
+  complaints = complaints + 1;
+  //puts it back
+  document.getElementById(firstplayerusable + "Complaints").innerHTML = complaints;
 }
