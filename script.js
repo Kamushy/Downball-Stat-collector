@@ -243,7 +243,7 @@ function doeverything() {
         }
 
         if (queendeaths === 0){
-          var queedeathratio = 0
+          var queendeathratio = 0
         } else {
           var queendeathratio = queendeaths / queenrounds ;
         }
@@ -256,7 +256,7 @@ function doeverything() {
         //adds it to graph
         document.getElementById(dunceusable + "Deaths per round").innerHTML = duncedeathratio.toFixed(2);
         document.getElementById(jackusable + "Deaths per round").innerHTML = jackdeathratio.toFixed(2);
-        document.getElementById(queenusable + "Deaths per round").innerHTML = queedeathratio.toFixed(2);
+        document.getElementById(queenusable + "Deaths per round").innerHTML = queendeathratio.toFixed(2);
         document.getElementById(kingusable + "Deaths per round").innerHTML = kingdeathratio.toFixed(2);
       }
       else if (secondplayerusable === queenusable){
@@ -417,7 +417,7 @@ function doeverything() {
         }
 
         if (queendeaths === 0){
-          var queedeathratio = 0
+          var queendeathratio = 0
         } else {
           var queendeathratio = queendeaths / queenrounds ;
         }
@@ -430,7 +430,8 @@ function doeverything() {
         //adds it to graph
         document.getElementById(dunceusable + "Deaths per round").innerHTML = duncedeathratio.toFixed(2);
         document.getElementById(jackusable + "Deaths per round").innerHTML = jackdeathratio.toFixed(2);
-        document.getElementById(queenusable + "Deaths per round").innerHTML = queedeathratio.toFixed(2);
+        document.getElementById(queenusable + "Deaths per round").innerHTML = queendeathratio.toFixed(2);
+        document.getElementById(kingusable + "Deaths per round").innerHTML = kingdeathratio.toFixed(2);
       }
       else if (secondplayerusable === jackusable){
         jackout.call();
@@ -589,7 +590,7 @@ function doeverything() {
         }
 
         if (queendeaths === 0){
-          var queedeathratio = 0
+          var queendeathratio = 0
         } else {
           var queendeathratio = queendeaths / queenrounds ;
         }
@@ -602,7 +603,8 @@ function doeverything() {
         //adds it to graph
         document.getElementById(dunceusable + "Deaths per round").innerHTML = duncedeathratio.toFixed(2);
         document.getElementById(jackusable + "Deaths per round").innerHTML = jackdeathratio.toFixed(2);
-        document.getElementById(queenusable + "Deaths per round").innerHTML = queedeathratio.toFixed(2);
+        document.getElementById(queenusable + "Deaths per round").innerHTML = queendeathratio.toFixed(2);
+        document.getElementById(kingusable + "Deaths per round").innerHTML = kingdeathratio.toFixed(2);
       }
       else if (secondplayerusable === dunceusable){
         dunceout.call();
@@ -760,7 +762,7 @@ function doeverything() {
         }
 
         if (queendeaths === 0){
-          var queedeathratio = 0
+          var queendeathratio = 0
         } else {
           var queendeathratio = queendeaths / queenrounds ;
         }
@@ -773,7 +775,8 @@ function doeverything() {
         //adds it to graph
         document.getElementById(dunceusable + "Deaths per round").innerHTML = duncedeathratio.toFixed(2);
         document.getElementById(jackusable + "Deaths per round").innerHTML = jackdeathratio.toFixed(2);
-        document.getElementById(queenusable + "Deaths per round").innerHTML = queedeathratio.toFixed(2);
+        document.getElementById(queenusable + "Deaths per round").innerHTML = queendeathratio.toFixed(2);
+        document.getElementById(kingusable + "Deaths per round").innerHTML = kingdeathratio.toFixed(2);
 
     }
   }
