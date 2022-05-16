@@ -66,6 +66,7 @@ function kingout() {
 
 
 function doeverything() {
+  saveMemento.call()
   var kingusable = document.getElementById('king').innerHTML;
   var queenusable = document.getElementById('queen').innerHTML;
   var jackusable = document.getElementById('jack').innerHTML;
@@ -853,3 +854,22 @@ function docomplaints(){
   //puts it back
   document.getElementById(firstplayerusable + "Complaints").innerHTML = complaints;
 }
+
+
+
+
+var pagesaved =  0
+function saveMemento() {
+  pagesaved = pagesaved + 1
+  sessionStorage.setItem(pagesaved, document.body.innerHTML)
+}
+
+function undo() {
+  let content = sessionStorage.getItem(pagesaved)
+  if(content) {
+    document.body.innerHTML = content
+  }
+  pagesaved = pagesaved -1
+}
+
+
