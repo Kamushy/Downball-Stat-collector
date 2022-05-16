@@ -14,6 +14,13 @@ function queenout() {
     var strUser = e.options[e.selectedIndex].text;
     btndunce.textContent = strUser;
    
+    document.getElementById("formselectqueen").innerHTML = toqueen;
+    document.getElementById("formselectjack").innerHTML = tojack;
+    document.getElementById("formselectdunce").innerHTML = strUser;
+
+    document.getElementById("formselectqueensecond").innerHTML = toqueen;
+    document.getElementById("formselectjacksecond").innerHTML = tojack;
+    document.getElementById("formselectduncesecond").innerHTML = strUser;
 }
      
 function jackout() {
@@ -29,6 +36,12 @@ function jackout() {
     var strUser = e.options[e.selectedIndex].text;
     btndunce.textContent = strUser;
 
+    
+    document.getElementById("formselectjack").innerHTML = tojack;
+    document.getElementById("formselectdunce").innerHTML = strUser;
+
+    document.getElementById("formselectjacksecond").innerHTML = tojack;
+    document.getElementById("formselectduncesecond").innerHTML = strUser;
 }
 
 function dunceout() {
@@ -37,6 +50,10 @@ function dunceout() {
     var e = document.getElementById("chooseplayers");
     var strUser = e.options[e.selectedIndex].text;
     btndunce.textContent = strUser;
+
+    document.getElementById("formselectdunce").innerHTML = strUser;
+
+    document.getElementById("formselectduncesecond").innerHTML = strUser;
 }
 
 function kingout() {
@@ -58,10 +75,24 @@ function kingout() {
       var e = document.getElementById("chooseplayers");
       var strUser = e.options[e.selectedIndex].text;
       btndunce.textContent = strUser;
+      document.getElementById("formselectking").innerHTML = strUser;
+      document.getElementById("formselectkingsecond").innerHTML = strUser;
        
     } else { 
       btndunce.textContent = todunce ;
+      document.getElementById("formselectdunce").innerHTML = todunce;
+      document.getElementById("formselectking").innerHTML = toking;
+
+      document.getElementById("formselectduncesecond").innerHTML = todunce;
+      document.getElementById("formselectkingsecond").innerHTML = toking;
     }
+
+    
+    document.getElementById("formselectqueen").innerHTML = toqueen;
+    document.getElementById("formselectjack").innerHTML = tojack;
+
+    document.getElementById("formselectqueensecond").innerHTML = toqueen;
+    document.getElementById("formselectjacksecond").innerHTML = tojack;
 }
 
 
@@ -607,6 +638,12 @@ function doeverything() {
         document.getElementById(queenusable + "Deaths per round").innerHTML = queendeathratio.toFixed(2);
         document.getElementById(kingusable + "Deaths per round").innerHTML = kingdeathratio.toFixed(2);
       }
+
+
+
+
+
+      
       else if (secondplayerusable === dunceusable){
         dunceout.call();
 
@@ -792,7 +829,10 @@ function placeking() {
   var strUser = e.options[e.selectedIndex].text;
   //set the selected player in the position
   btnking.textContent = strUser
-
+  //puts king in form
+  document.getElementById("formselectking").innerHTML = strUser;
+  //puts king in form2
+  document.getElementById("formselectkingsecond").innerHTML = strUser;
 }
 
 function placequeen() {
@@ -803,7 +843,10 @@ function placequeen() {
   var strUser = e.options[e.selectedIndex].text;
   //set the selected player in the position
   btnqueen.textContent = strUser
-
+  //puts queen in form
+  document.getElementById("formselectqueen").innerHTML = strUser;
+  //puts queen in form2
+  document.getElementById("formselectqueensecond").innerHTML = strUser;
 }
 
 function placejack() {
@@ -814,6 +857,10 @@ function placejack() {
   var strUser = e.options[e.selectedIndex].text;
   //set the selected player in the position
   btnjack.textContent = strUser
+  //puts jack in form
+  document.getElementById("formselectjack").innerHTML = strUser;
+  //puts jack in form2
+  document.getElementById("formselectjacksecond").innerHTML = strUser;
 
 }
 
@@ -825,6 +872,10 @@ function placedunce() {
   var strUser = e.options[e.selectedIndex].text;
   //set the selected player in the position
   btndunce.textContent = strUser
+  //puts dunce in form
+  document.getElementById("formselectdunce").innerHTML = strUser;
+  //puts dunce in form2
+  document.getElementById("formselectduncesecond").innerHTML = strUser;
 }
 
 function domistake(){
