@@ -1,100 +1,102 @@
+function kingout() {
+  //gets all players on court
+  var btnking = document.getElementById('king');
+  var btnqueen = document.getElementById('queen');
+  var btnjack = document.getElementById('jack');
+  var btndunce = document.getElementById('dunce');
+
+  //gets the next places for the players
+  var toking = btnqueen.textContent
+  var toqueen = btnjack.textContent
+  var tojack = btndunce.textContent
+  var todunce = btnking.textContent
+  
+  //puts the players in the right place
+  btnking.textContent = toking ;
+  btnqueen.textContent = toqueen ;
+  btnjack.textContent = tojack ;
+  btndunce.textContent = todunce ;
+
+  //adds the people to first form
+  document.getElementById("formselectking").innerHTML = toking;
+  document.getElementById("formselectqueen").innerHTML = toqueen;
+  document.getElementById("formselectjack").innerHTML = tojack;
+  document.getElementById("formselectdunce").innerHTML = todunce;
+  //adds the people to second form
+  document.getElementById("formselectkingsecond").innerHTML = toking;
+  document.getElementById("formselectqueensecond").innerHTML = toqueen;
+  document.getElementById("formselectjacksecond").innerHTML = tojack;
+  document.getElementById("formselectduncesecond").innerHTML = todunce;
+}
+
 function queenout() {
-    var btnqueen = document.getElementById('queen');
-    var btnjack = document.getElementById('jack');
-    var btndunce = document.getElementById('dunce');
+  //gets all the players below queen
+  var btnqueen = document.getElementById('queen');
+  var btnjack = document.getElementById('jack');
+  var btndunce = document.getElementById('dunce');
 
-    var toqueen = btnjack.textContent
-    var tojack = btndunce.textContent
+  //gets the next places for the players
+  var toqueen = btnjack.textContent
+  var tojack = btndunce.textContent
 
-    btnqueen.textContent = toqueen ;
-    btnjack.textContent = tojack;  
-    btndunce.textContent = ""; 
+  //put the prevous calculation in full swing
+  btnqueen.textContent = toqueen ;
+  btnjack.textContent = tojack;  
 
-    var e = document.getElementById("chooseplayers");
-    var strUser = e.options[e.selectedIndex].text;
-    btndunce.textContent = strUser;
-   
-    document.getElementById("formselectqueen").innerHTML = toqueen;
-    document.getElementById("formselectjack").innerHTML = tojack;
-    document.getElementById("formselectdunce").innerHTML = strUser;
-
-    document.getElementById("formselectqueensecond").innerHTML = toqueen;
-    document.getElementById("formselectjacksecond").innerHTML = tojack;
-    document.getElementById("formselectduncesecond").innerHTML = strUser;
+  //gets next player in line
+  var nextplayer = document.getElementById("chooseplayers");
+  var nextinline = nextplayer.options[nextplayer.selectedIndex].text;
+  //puts next in line in dunce
+  btndunce.textContent = nextinline;
+  
+  //fills out first form
+  document.getElementById("formselectqueen").innerHTML = toqueen;
+  document.getElementById("formselectjack").innerHTML = tojack;
+  document.getElementById("formselectdunce").innerHTML = nextinline;
+  //fills out second form
+  document.getElementById("formselectqueensecond").innerHTML = toqueen;
+  document.getElementById("formselectjacksecond").innerHTML = tojack;
+  document.getElementById("formselectduncesecond").innerHTML = nextinline;
 }
      
 function jackout() {
-    var btnjack = document.getElementById('jack');
-    var btndunce = document.getElementById('dunce');
+  //gets jack and players below
+  var btnjack = document.getElementById('jack');
+  var btndunce = document.getElementById('dunce');
 
-    var tojack = btndunce.textContent
+  //dunce goes to jack
+  var tojack = btndunce.textContent
+  btnjack.textContent = tojack;  
 
-    btnjack.textContent = tojack;  
-    btndunce.textContent = ""; 
-
-    var e = document.getElementById("chooseplayers");
-    var strUser = e.options[e.selectedIndex].text;
-    btndunce.textContent = strUser;
-
-    
-    document.getElementById("formselectjack").innerHTML = tojack;
-    document.getElementById("formselectdunce").innerHTML = strUser;
-
-    document.getElementById("formselectjacksecond").innerHTML = tojack;
-    document.getElementById("formselectduncesecond").innerHTML = strUser;
+  //gets next player in line
+  var nextplayer = document.getElementById("chooseplayers");
+  var nextinline = nextplayer.options[nextplayer.selectedIndex].text;
+  //puts next in line in dunce
+  btndunce.textContent = nextinline;
+  
+  //adds the people to first form
+  document.getElementById("formselectjack").innerHTML = tojack;
+  document.getElementById("formselectdunce").innerHTML = nextinline;
+  //adds the people to second form
+  document.getElementById("formselectjacksecond").innerHTML = tojack;
+  document.getElementById("formselectduncesecond").innerHTML = nextinline;
 }
 
 function dunceout() {
-    var btndunce = document.getElementById('dunce');
+  //gets dunce position
+  var btndunce = document.getElementById('dunce');
 
-    var e = document.getElementById("chooseplayers");
-    var strUser = e.options[e.selectedIndex].text;
-    btndunce.textContent = strUser;
+  //gets next player in line
+  var nextplayer = document.getElementById("chooseplayers");
+  var nextinline = nextplayer.options[nextplayer.selectedIndex].text;
+  //puts next in line in dunce
+  btndunce.textContent = nextinline;
 
-    document.getElementById("formselectdunce").innerHTML = strUser;
-
-    document.getElementById("formselectduncesecond").innerHTML = strUser;
+  //puts person in first form
+  document.getElementById("formselectdunce").innerHTML =  nextinline;
+  //puts person in second form
+  document.getElementById("formselectduncesecond").innerHTML =  nextinline;
 }
-
-function kingout() {
-    var btnking = document.getElementById('king');
-    var btnqueen = document.getElementById('queen');
-    var btnjack = document.getElementById('jack');
-    var btndunce = document.getElementById('dunce');
-
-    var toking = btnqueen.textContent
-    var toqueen = btnjack.textContent
-    var tojack = btndunce.textContent
-    var todunce = btnking.textContent
-    
-    btnking.textContent = toking ;
-    btnqueen.textContent = toqueen ;
-    btnjack.textContent = tojack ;
-    
-    if (btndunce.length === 0) {
-      var e = document.getElementById("chooseplayers");
-      var strUser = e.options[e.selectedIndex].text;
-      btndunce.textContent = strUser;
-      document.getElementById("formselectking").innerHTML = strUser;
-      document.getElementById("formselectkingsecond").innerHTML = strUser;
-       
-    } else { 
-      btndunce.textContent = todunce ;
-      document.getElementById("formselectdunce").innerHTML = todunce;
-      document.getElementById("formselectking").innerHTML = toking;
-
-      document.getElementById("formselectduncesecond").innerHTML = todunce;
-      document.getElementById("formselectkingsecond").innerHTML = toking;
-    }
-
-    
-    document.getElementById("formselectqueen").innerHTML = toqueen;
-    document.getElementById("formselectjack").innerHTML = tojack;
-
-    document.getElementById("formselectqueensecond").innerHTML = toqueen;
-    document.getElementById("formselectjacksecond").innerHTML = tojack;
-}
-
 
 function doeverything() {
   //saves a copy of the page ready for undo
@@ -126,13 +128,13 @@ function doeverything() {
     document.getElementById(firstplayerusable + "kills").innerHTML = firstplayerkills;
 
     // gets second players deaths value
-    var seconduserdeaths = document.getElementById(secondplayerusable + "deaths").innerHTML;
+    var secondplayerdeaths = document.getElementById(secondplayerusable + "deaths").innerHTML;
     //turns it to int
-    seconduserdeaths = parseInt(seconduserdeaths);
+    secondplayerdeaths = parseInt(secondplayerdeaths);
     //adds 1 
-    seconduserdeaths += 1;
+    secondplayerdeaths += 1;
     //puts it back
-    document.getElementById(secondplayerusable + "deaths").innerHTML = seconduserdeaths;
+    document.getElementById(secondplayerusable + "deaths").innerHTML = secondplayerdeaths;
 
     //KD for first player
     // gets first player deaths but kills were retrieved earlier
@@ -148,37 +150,32 @@ function doeverything() {
     //puts it back
     document.getElementById(firstplayerusable + "KD").innerHTML = kd.toFixed(2);
 
-
-    // PLAYER 2 KD
-
-    //gets og kills value
-    var secondkills = document.getElementById(secondplayerusable + "kills").innerHTML;
-    // gets og deaths value
-    var seconddeaths = document.getElementById(secondplayerusable + "deaths").innerHTML;
+    // KD for second player
+    //gets the kills for the second player
+    var secondplayerkills = document.getElementById(secondplayerusable + "kills").innerHTML;
     //turns it to int
-    secondkills = parseInt(secondkills);
-    seconddeaths = parseInt(seconddeaths);
+    secondplayerkills = parseInt(secondplayerkills);
     //if death is 0 then the kd should still be right
-    if (seconddeaths <= 0){
-    kd = secondkills/ 1
+    if (secondplayerdeaths <= 0){
+    kd = secondplayerkills/ 1
     } else {
-    kd = secondkills / seconddeaths
+    kd = secondplayerkills / secondplayerdeaths
     }
     //puts it back
     document.getElementById(secondplayerusable + "KD").innerHTML = kd.toFixed(2);       
 
-
+    //Rounds per player
     //gets round per player 
     var dunceround = document.getElementById(dunceusable + "Rounds"+ " played").innerHTML;
     var jackround = document.getElementById(jackusable + "Rounds"+ " played").innerHTML;
     var queenround = document.getElementById(queenusable + "Rounds"+ " played").innerHTML;
     var kinground = document.getElementById(kingusable + "Rounds"+ " played").innerHTML;
-    //turns it into int
+    //turns it into number/int
     dunceround = parseInt(dunceround);
     jackround = parseInt(jackround);
     queenround = parseInt(queenround);
     kinground = parseInt(kinground);
-    //ads one per round
+    //adds one per round
     dunceround = dunceround + 1;
     jackround = jackround + 1;
     queenround = queenround + 1;
@@ -189,50 +186,49 @@ function doeverything() {
     document.getElementById(queenusable + "Rounds"+ " played").innerHTML = queenround;
     document.getElementById(kingusable + "Rounds"+ " played").innerHTML = kinground;
 
-
-    //gets rounds
-    var duncerounds = document.getElementById(dunceusable + "Rounds"+ " played").innerHTML;
-    var jackrounds = document.getElementById(jackusable + "Rounds"+ " played").innerHTML;
-    var queenrounds = document.getElementById(queenusable + "Rounds"+ " played").innerHTML;
-    var kingrounds = document.getElementById(kingusable + "Rounds"+ " played").innerHTML;
+    //Kill per round rating
     //get kills
     var duncekills = document.getElementById(dunceusable + "kills").innerHTML;
     var jackkills = document.getElementById(jackusable + "kills").innerHTML;
     var queenkills = document.getElementById(queenusable + "kills").innerHTML;
     var kingkills = document.getElementById(kingusable + "kills").innerHTML;
-    //turns rounds into int
-    duncerounds= parseInt(duncerounds);
-    jackrounds = parseInt(jackrounds);
-    queenrounds = parseInt(queenrounds);
-    kingrounds = parseInt(kingrounds);
     //turns kills in int
     duncekills = parseInt(duncekills);
     jackkills = parseInt(jackkills);
     queenkills = parseInt(queenkills);
     kingkills = parseInt(kingkills);
-    //gets ratiooooo
+
+    //calcs for ratio 
     if (duncekills === 0){
-    var dunceratio = 0
+      //if kills are zero then so is rating
+      var dunceratio = 0
     } else {
-    var dunceratio =  duncekills / duncerounds;
+      //get the ratio if its not ratio
+      var dunceratio = duncekills / dunceround;
     }
 
     if (jackkills === 0){
-    var jackratio = 0
+      //if kills are zero then so is rating
+      var jackratio = 0
     } else {
-    var jackratio = jackkills / jackrounds ;
+      //get the ratio if its not ratio
+      var jackratio = jackkills / jackround ;
     }
 
     if (queenkills === 0){
-    var queenratio = 0
+      //if kills are zero then so is rating
+      var queenratio = 0
     } else {
-    var queenratio = queenkills / queenrounds ;
+      //get the ratio if its not ratio
+      var queenratio = queenkills / queenround ;
     }
-
+    
     if (kingkills === 0){
-    var kingratio = 0
+      //if kills are zero then so is rating
+      var kingratio = 0
     } else {
-    var kingratio =  kingkills / kingrounds;
+      //get the ratio if its not ratio
+      var kingratio = kingkills / kinground;
     }
 
     //adds it to graph
@@ -241,7 +237,7 @@ function doeverything() {
     document.getElementById(queenusable + "Kill"+ " per" +" round").innerHTML = queenratio.toFixed(2);
     document.getElementById(kingusable + "Kill"+ " per" +" round").innerHTML = kingratio.toFixed(2);
 
-
+    //Death per round rating
     //get deaths
     var duncedeaths = document.getElementById(dunceusable + "deaths").innerHTML;
     var jackdeaths = document.getElementById(jackusable + "deaths").innerHTML;
@@ -255,27 +251,27 @@ function doeverything() {
 
     //gets ratiooooo
     if (duncedeaths === 0){
-    var duncedeathratio = 0
+      var duncedeathratio = 0
     } else {
-    var duncedeathratio =  duncedeaths / duncerounds;
+      var duncedeathratio = duncedeaths / dunceround;
     }
 
     if (jackdeaths === 0){
-    var jackdeathratio = 0
+      var jackdeathratio = 0
     } else {
-    var jackdeathratio = jackdeaths / jackrounds ;
+      var jackdeathratio = jackdeaths / jackround ;
     }
 
     if (queendeaths === 0){
-    var queendeathratio = 0
+      var queendeathratio = 0
     } else {
-    var queendeathratio = queendeaths / queenrounds ;
+      var queendeathratio = queendeaths / queenround ;
     }
 
     if (kingdeaths === 0){
-    var kingdeathratio = 0
+      var kingdeathratio = 0
     } else {
-    var kingdeathratio =  kingdeaths / kingrounds;
+      var kingdeathratio = kingdeaths / kinground;
     }
     //adds it to graph
     document.getElementById(dunceusable + "Deaths per round").innerHTML = duncedeathratio.toFixed(2);
@@ -283,6 +279,7 @@ function doeverything() {
     document.getElementById(queenusable + "Deaths per round").innerHTML = queendeathratio.toFixed(2);
     document.getElementById(kingusable + "Deaths per round").innerHTML = kingdeathratio.toFixed(2);
     
+    //call the function to move the board
     if (secondplayerusable === kingusable){
       kingout.call();
     }
@@ -338,7 +335,6 @@ function placejack() {
   document.getElementById("formselectjack").innerHTML = strUser;
   //puts jack in form2
   document.getElementById("formselectjacksecond").innerHTML = strUser;
-
 }
 
 function placedunce() {
